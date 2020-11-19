@@ -2,18 +2,17 @@
 
 ## Purpose
 
-To have a template repository with the minimum required pre-commit hooks ready to ensure developers are able to work without obstacles from security and linting checks but also a customisable platform for them to build on to help improve code quality.
+A template repository for developing Ansible Roles with a
 
 ### Technology
 We're using Pre-Commit Hooks and configuration from [https://pre-commit.com/](https://pre-commit.com/)
+It uses Chef Kitchen and Vagrant for the test harness and Chef Inspect for running the tests.
 
 ## History
 
 |Version                |Author                          |Date|Changes
 |----------------|-------------------------------|-----------------------------|-----------------------------|
-|v0.1|Gareth Evans|01/03/2020|Initial Version
-|v0.2|Gareth Evans|09/11/2020|Updated versions of components, added installation/setup for pre-commit, detect secrets and detect secrets use command lines.
-|v0.3|Gareth Evans|10/11/2020|Added Ansible Linter.
+|v0.1|Gareth Evans|10/10/2020|Initial Version
 
 ## Under the bonnet/hood
 
@@ -38,9 +37,18 @@ We're using Pre-Commit Hooks and configuration from [https://pre-commit.com/](ht
 |**Shell Check**|v2.1.4           |https://github.com/jumanjihouse/pre-commit-hooks
 |**Ansible Linter**|v4.3.7           |https://github.com/ansible/ansible-lint
 
+## Testing Tools
+|Name                |Version                          |URL                         |
+|----------------|-------------------------------|-----------------------------|
+|**Chef Inspec**|Latest            |https://github.com/inspec/inspec
+
 ## Setup
 
 ### Developer(s) Machines Setup
+
+#### Chef Kitchen
+On Linux/Mac, Run ```cd Kitchen``` then ```bundle install``` to install the required Ruby gems.
+https://docs.chef.io/workstation/install_workstation/
 
 #### Pre-Commit
 Run```pip install pre-commit``` or ```brew install pre-commit``` on the developer machine to install pre-commit.
@@ -77,7 +85,7 @@ This pulls the content of the base repo into the new repository - similar to cop
 ## How to use
 
 ### Setup
-To setup the repositroy for running pre-commit run ```pre-commit install```.
+To setup the repository for running pre-commit run ```pre-commit install```.
 
 ### Run automatically.
 Make a change and commit your changes, this will run the pre-commit hooks.

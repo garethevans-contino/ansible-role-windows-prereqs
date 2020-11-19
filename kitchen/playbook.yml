@@ -1,0 +1,6 @@
+---
+
+- name: CHANGE_THE_ROLE_NAME
+  hosts: windows-servers
+  roles:
+    - CHANGE_THE_ROLE_NAME
