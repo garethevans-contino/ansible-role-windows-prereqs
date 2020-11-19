@@ -5,10 +5,10 @@
   tags:
     - setup
 
-- name: Configure Role
-  include: configure.yml
-  tags:
-    - config
+# - name: Configure Role
+#   include: configure.yml
+#   tags:
+#     - config
 
 - name: Install Role
   include: install.yml

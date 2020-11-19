@@ -1,7 +1,7 @@
 ---
 
-- name: Test - Check if WinRM Service is running
+- name: Is the WinRM Service is running? # noqa 301
   raw: Get-Service WinRM -ErrorAction SilentlyContinue
   register: result
 
-- debug: msg="{{result}}"
+- debug: msg="{{ result }}"
