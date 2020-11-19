@@ -1,6 +1,6 @@
 ---
 
-- name: CHANGE_THE_ROLE_NAME
+- name: windows_prereqs
   hosts: windows-servers
   roles:
-    - CHANGE_THE_ROLE_NAME
+    - windows_prereqs

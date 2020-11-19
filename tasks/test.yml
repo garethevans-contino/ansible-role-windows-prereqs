@@ -1,4 +1,7 @@
 ---
 
-- debug:
-    msg: "Path: '{{ playbook_dir }}'"
+- name: Test - Check if WinRM Service is running
+  raw: Get-Service WinRM -ErrorAction SilentlyContinue
+  register: result
+
+- debug: msg="{{result}}"

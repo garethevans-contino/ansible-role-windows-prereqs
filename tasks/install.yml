@@ -1,1 +1,12 @@
 ---
+
+# Chocolatey Features
+- name: Feature - Install Notepad++
+  win_chocolatey:
+    name: npppluginmanager
+    state: present
+
+- name: Feature - Install Baretail
+  win_chocolatey:
+    name: baretail
+    state: present

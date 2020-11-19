@@ -19,7 +19,7 @@ platforms:
     provisioner:
       name: ansible_playbook
       roles_path: ../
-      role_name: ##rolename##
+      role_name: windows_prereqs
       ansible_connection: winrm
       ansible_inventory: inventory/hosts
       require_windows_support: true

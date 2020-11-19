@@ -15,7 +15,7 @@
   tags:
     - install
 
-# - name: Test Role
-#   include: test.yml
-#   tags:
-#     - test
+- name: Test Role
+  include: test.yml
+  tags:
+    - test
